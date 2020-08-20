@@ -41,22 +41,6 @@ var shield = [
     }
 ];
 
-/*function createShield() {
-    var x = 100;     
-    var y = 100;     
-    var width = 20;     
-    var height = 20;
-    var color = "GREEN";
-    
-    var shield = {
-        x:100,     
-        y:100,     
-        width:5,     
-        height:10,
-        color:"Green"
-    }
-}*/
-
 var direction = 1;
 
 //enemy function
