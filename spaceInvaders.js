@@ -57,7 +57,7 @@ var invaders = function(x,y,speed,drop) {
             //they will drop and reverse direction
             if(this.x > cvs.width - 10) {
                 gameState.wallR = 1;
-                for(var i=0; i<enemies.length; i++){
+                for(var i=0; i<enemies.length; i++) {
                     enemies[i].y = enemies[i].y + this.drop;   
                 }           
             }
@@ -71,7 +71,7 @@ var invaders = function(x,y,speed,drop) {
             //they will drop. Reverse taken care of in above code
             if(this.x < 0) {
                 gameState.wallL = 1;
-                for(var i=0;i<enemies.length;i++){
+                for(var i=0; i<enemies.length; i++) {
                     enemies[i].y = enemies[i].y + this.drop;
                 } 
             }
@@ -87,15 +87,15 @@ var invaders = function(x,y,speed,drop) {
 //enemy array
 var enemies = [];
 //loop for creating enemies
-for(var j=0;j<5;j++){
-    for(var i=0;i<11;i++){
+for(var j=0; j<5; j++) {
+    for(var i=0; i<11; i++) {
         enemies[i+11*j] = new invaders(100+30*i,50+30*j,2,1);
     }
 }
 
 var timeGame = 30;
 
-function drawRect(x,y,w,h,color){
+function drawRect(x,y,w,h,color) {
     ctx.fillStyle = color;
     ctx.fillRect(x,y,w,h);
 }
@@ -146,7 +146,7 @@ function game(){
           
     //enabling the enemy creation and update loop for them
     
-    for(var i=0;i<enemies.length;i++){
+    for(var i=0; i<enemies.length; i++) {
         enemies[i].update();
     }
     //seeing if I can modify the pacing, especially later when less enemies on screen
